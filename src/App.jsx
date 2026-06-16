@@ -1,6 +1,6 @@
 
-import Categories from "./component/catogories";
-import Footer from "./component/footer";
+import Categories from "./component/Catogories";
+import Footer from "./component/Footer";
 import Hero from "./component/Hero";
 function App(){
   return(
