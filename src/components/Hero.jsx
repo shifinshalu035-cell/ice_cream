@@ -7,28 +7,27 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import logo from "../assets/man.png";
-
 import picture4 from "../assets/pic4.png";
 
-
-function Hero(){
-  useEffect(()=>{
+function Hero() {
+  useEffect(() => {
     AOS.init({
-      duration:1000,
-      once:true 
+      duration: 1000,
+      once: true,
     });
-  },[]);
- 
-return (
+  }, []);
 
+  return (
     <>
-      
-      <section  className="  bg-[#dbd1c0] py-0.5">
-       
-        <div className="  hidden lg:flex justify-between items-center py-1 h-20 ">
-           <img src={logo} alt="company logo" className="w-35 h-35 object-contain gap-20 hover:scale-120 transition" />
-          <ul className="flex items-center gap-30 text-lg  mt-0 ">
-            
+      <section className="bg-[#dbd1c0] py-0.5">
+        <div className="hidden lg:flex justify-between items-center py-1 h-20 px-4">
+          <img
+            src={logo}
+            alt="company logo"
+            className="w-20 h-20 md:w-28 md:h-28 lg:w-35 lg:h-35 object-contain hover:scale-120 transition"
+          />
+
+          <ul className="flex items-center gap-4 md:gap-10 lg:gap-30 text-lg mt-0">
             <li className="hover:scale-120 transition">Home</li>
             <li className="hover:scale-120 transition">About</li>
             <li className="hover:scale-120 transition">Register</li>
@@ -42,67 +41,64 @@ return (
         </div>
       </section>
 
-      
       <section className="min-h-screen bg-[#F6F1E9] flex items-center">
-        <div className="max-w-7xl mx-auto px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
 
-          
           <h1
-  data-aos="fade-left"
-  className=" text-3xl lg:text-6xl  text-blue-950   Playfair Display leading-tight"
->
-  Find your new <br />
-  favorite flavor.
-</h1>
+            data-aos="fade-left"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-blue-950 leading-tight"
+          >
+            Find your new <br />
+            favorite flavor.
+          </h1>
 
-          
-          <p className="text-xl text-gray-700 mt-6 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-gray-700 mt-6 max-w-2xl mx-auto px-4">
             Discover delicious ice creams and choose the flavor you're
             craving today.
           </p>
 
-          
-          <div className="flex justify-center  bg-[#F6F1E9]  w-full ">
-            
-          </div>
+          <div className="flex justify-center bg-[#F6F1E9] w-full"></div>
 
-          
-          <div className="flex flex-col items-center gap-10 mt-10 w-full lg:1/2">
+          <div className="flex flex-col items-center gap-10 mt-10 w-full lg:w-1/2 mx-auto">
 
             <button className="bg-blue-600 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
               Explore Flavors
             </button>
 
-            <div className="flex  justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+
               <img
                 src={chocolate}
                 alt="Chocolate"
-                className="h-28 w-28 object-cover rounded-xl hover:scale-120 transition "
+                className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 object-cover rounded-xl hover:scale-120 transition"
               />
 
               <img
                 src={strawberry}
                 alt="Strawberry"
-                className="h-28 w-28 object-cover rounded-xl hover:scale-120 transition"
+                className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 object-cover rounded-xl hover:scale-120 transition"
               />
-   
+
               <img
                 src={vanilla}
                 alt="Vanilla"
-                className="h-28 w-28 object-cover rounded-xl sh hover:scale-120 transition"
+                className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 object-cover rounded-xl sh hover:scale-120 transition"
               />
 
               <img
                 src={mago}
                 alt="Mango"
-                className="h-28 w-28 object-cover rounded-xl shadow-md hover:scale-120 transition"
+                className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 object-cover rounded-xl shadow-md hover:scale-120 transition"
               />
+
             </div>
           </div>
 
-          
-          <div className="mt-12 max-w-2xl  lg:max-w-4xl mx-auto " >
-            <p className="text-gray-700 leading-relaxed text-center" data-aos="fade-right">
+          <div className="mt-12 max-w-2xl lg:max-w-4xl mx-auto px-4">
+            <p
+              className="text-gray-700 leading-relaxed text-center"
+              data-aos="fade-right"
+            >
               Enjoy a delicious and creamy ice cream that not only satisfies
               your sweet cravings but also supports your digestive wellness.
               Enriched with beneficial probiotics and nourishing prebiotics,
@@ -118,6 +114,5 @@ return (
     </>
   );
 }
-
 
 export default Hero;
