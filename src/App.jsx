@@ -1,7 +1,7 @@
 
-import Categories from "./component/Catogories";
-import Footer from "./component/Footer";
-import Hero from "./component/Hero";
+import Categories from "./components/Catogories";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 function App(){
   return(
    <>
